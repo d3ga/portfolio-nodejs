@@ -1,0 +1,294 @@
+// Imports
+// @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
+@import "bootstrap-custom";
+@import "~bootstrap/scss/bootstrap";
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
+// Global Styles 
+
+h3 {
+    color: $text-color;
+    margin-top: 0px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: $text-color;
+    font-weight: 800;
+}
+
+p {
+    color: $text-color;
+    font-weight: 400;
+}
+
+span {
+    color: $highlights;
+}
+
+label {
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.container-fluid {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+// Navbar
+
+.fixed-top {
+    left: 2rem;
+}
+
+// .navbar-light {
+//     mix-blend-mode: overlay;
+// }
+
+.nav-link {
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    transition: $links-hover-transition; 
+}
+
+.navbar-light .navbar-brand {
+    color: $text-color;
+    transition: $links-hover-transition;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    &:hover {
+        color: $text-color;   
+    }
+}
+
+// Navbar Toggler
+
+.navbar-toggler {
+    margin-right: 1rem;
+}
+
+.navbar-toggler-icon {
+    transform: rotate(-45deg);
+}
+
+button:focus {
+    outline: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: none;
+    // overflow: hidden;
+}
+
+.bar {
+    background: $text-color;
+    display: block;
+    padding: 1px;
+    margin-top: 6px;
+}
+
+.top-bar {
+    animation: rotation 15s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+    // animation-delay: 3.5s;
+    margin-left: 7px;
+    width: 15px;
+}
+
+.middle-bar {
+    animation: rotation 15s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+    // animation-delay: 3.4s;
+    width: 30px;
+}
+
+.bottom-bar {
+    animation: rotation 15s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+    // animation-delay: 3s;
+    margin-left: 7px;
+    width: 15px;
+}
+
+@keyframes rotation {
+    80% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+// Home
+
+.jumbotron {
+    position: absolute;
+    margin-bottom: 0;
+    margin-top: 0px;
+    padding-top: 50px;
+    height: 100%;
+    width: 100%;
+
+    h1 {
+        text-align: center;
+        padding-top: 15rem;
+    }
+
+    p {
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+// Gallery
+
+.gallery-container {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+
+        .album-item {
+            display: inline-block;
+            position: relative;
+            border: none;
+            padding-left: 0px;
+            padding-right: 0px;
+            transition: $links-hover-transition;
+
+            &:hover .album-item-hover {
+                opacity: 1;
+            }
+
+            &:hover .fa {
+                color: $highlights;
+            }
+
+            .img-thumbnail {
+                border: none;
+
+            }
+
+            .album-item-hover {
+                opacity: 0;
+                background: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: rgba(255, 255, 255, 1);
+                text-align: center;
+                transition: opacity 0.15s ease;
+
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 2.5rem;
+                margin-left: -1rem;
+                margin-top: -1rem;
+            }
+
+        }
+    }
+}
+
+// About
+
+.about-body {
+    background-image: url(/images/sea_hero.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.about-container {
+    margin-bottom: 0;
+    margin-top: 25rem;
+    padding-top: 4rem;
+    background-color: #fff;
+}
+
+.skills-container {
+    background-color: #fff;
+    padding-top: 2rem;
+}
+
+.social-icons {
+    background-color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+}
+
+.awards {
+    a {
+        color: $highlights;
+        transition: $links-hover-transition;
+
+        &:hover {
+            color: $text-color;
+        }
+    }
+}
+
+// Buttons
+
+.btn-outline-light {
+    color: $highlights;
+    border: 1.4px solid $highlights;
+    border-radius: 0;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $highlights;
+        color: #fff;
+    } 
+    &:active {
+        color: $highlights;
+        border: 1.4px solid $highlights;
+    }
+}
+
+.fa {
+    color: $text-color;
+    margin-right: 1rem;
+    transition: $links-hover-transition;           
+
+    &:hover {
+        color: $highlights;
+    }
+}
+
+// Contact
+
+.contact-container {
+    margin-top: 7rem;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+
+    @media (min-width: 1200px) {
+        width: 40%;
+    }
+
+    .contact-background {
+        background: $highlights;
+        padding: 15px;
+    }
+}
+
+textarea.form-control {
+    height: auto;
+    margin-top: 2rem;
+}
+

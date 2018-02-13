@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    main.container(role="main")
+        .container
+            if status === 404
+                h2 404 - Page not found
+                p The requested page could no be found.
+            else
+                h2= status
+                p= message
+                pre.error!= stackHighlighted

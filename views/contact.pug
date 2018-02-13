@@ -1,0 +1,42 @@
+extends layout
+
+block content
+
+     .container.contact-container
+        .row.contact-background
+            .col-xs-12.col-md-12.col-lg-12
+                form.form
+                    .form-group
+                        label(
+                            for='inputname'
+                            ) Name 
+                        input(
+                            type='text',
+                            class='form-control',
+                            id='name',
+                            placeholder='your name here'
+                            ) 
+                    
+                    .form-group
+                        label(
+                            for='email'
+                            ) Email 
+                        input(
+                            type='email',
+                            class='form-control',
+                            id='email'
+                            placeholder='your@email.com'
+                            ) 
+                      
+                    .form-group
+                        textarea(
+                            class='form-control',
+                            rows='5'
+                            )
+
+        .form-group.text-center
+            button.btn.btn-outline-light(
+                type='submit'
+            ) Send
+            
+  

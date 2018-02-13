@@ -1,0 +1,42 @@
+block variables
+doctype html
+html
+  head
+    title= `${title || 'Home'} | ${helpers.siteName}`
+    link(rel='stylesheet', href='/dist/style.css')
+    meta(name="description", content=`${description  || 'Kostas Degaitas'}`)
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+  body(class=bodyClass ? bodyClass : '')
+
+    block header
+
+      nav.navbar.fixed-top.navbar-light
+        a.navbar-brand(href='/' ) Dega
+        button.navbar-toggler(
+            type='button'
+            data-toggle='collapse' 
+            data-target='#navbarNavAltMarkup' 
+            aria-controls='navbarNavAltMarkup' 
+            aria-expanded='false' 
+            aria-label='Toggle navigation' 
+        )
+            span.navbar-toggler-icon
+                span.bar.top-bar
+                span.bar.middle-bar
+                span.bar.bottom-bar
+   
+        .collapse.navbar-collapse.text-right#navbarNavAltMarkup
+            ul.navbar-nav.ml-auto.collapse
+                each entry in helpers.navigation
+                    li.nav-item
+                        a.nav-link(
+                            href=`${entry.href}`,
+                            class=(currentPath === entry.href ? 'active' : '')
+                        ) #{entry.name}
+     
+    block content
+
+    block footer
+
+    block scripts
+      script(src="/dist/app.bundle.js")

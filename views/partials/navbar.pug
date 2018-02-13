@@ -1,0 +1,51 @@
+nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+    a.navbar-brand(href="#") Navbar
+    button.navbar-toggler(
+        type="button",
+        data-toggle="collapse",
+        data-target="#navbarsExampleDefault",
+        aria-controls="navbarsExampleDefault",
+        aria-expanded="false",
+        aria-label="Toggle navigation"
+    )
+        span.navbar-toggler-icon
+
+    div#navbarsExampleDefault.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            each entry, index in helpers.navigation
+                li.nav-item(class=entry.childs ? 'dropdown' : '')
+                    if !entry.childs
+                        a.nav-link(
+                            href=`${entry.href}`,
+                            class=(
+                                (currentPath === entry.href ? 'active' : '') +
+                                (entry.class ? entry.class : '')
+                            )
+                        ) #{entry.name}
+                            if currentPath === entry.href
+                                span.sr-only (current)
+                    else
+                        a.nav-link(
+                            href=`${entry.href}`,
+                            class=(
+                                (currentPath === entry.href ? 'active' : '') +
+                                (entry.class ? entry.class : '') +
+                                'dropdown-toggle'
+                            ),
+                            id=`dropdown-${index}`,
+                            data-toggle="dropdown",
+                            aria-haspopup="true",
+                            aria-expanded="false"
+                        ) #{entry.name}
+
+                    if entry.childs
+                        .dropdown-menu(aria-labelledby="dropdown-${index}")
+                            each subentry in entry.childs
+                                a.dropdown-item(
+                                    href=subentry.href,
+                                    class=subentry.class ? subentry.class : ''
+                                ) #{subentry.name}
+            
+        form.form-inline.my-2.my-lg-0
+            input.form-control.mr-sm-2(type="text", name="q", placeholder="Search", aria-label="Search")
+            button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
