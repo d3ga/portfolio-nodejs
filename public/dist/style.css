@@ -152,7 +152,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #00E1FF;
+    color: #FFC200;
     text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
@@ -2412,7 +2412,7 @@ fieldset:disabled a.btn {
   color: #007bff;
   background-color: transparent; }
   .btn-link:hover {
-    color: #00E1FF;
+    color: #FFC200;
     text-decoration: none;
     background-color: transparent;
     border-color: transparent; }
@@ -3426,9 +3426,9 @@ tbody.collapse.show {
     bottom: 100%; }
 
 .navbar-light .navbar-brand {
-  color: #00E1FF; }
+  color: #FFC200; }
   .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-    color: #00E1FF; }
+    color: #FFC200; }
 
 .navbar-light .navbar-nav .nav-link {
   color: #000000; }
@@ -3441,7 +3441,7 @@ tbody.collapse.show {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #00E1FF; }
+  color: #FFC200; }
 
 .navbar-light .navbar-toggler {
   color: #000000;
@@ -3453,9 +3453,9 @@ tbody.collapse.show {
 .navbar-light .navbar-text {
   color: #000000; }
   .navbar-light .navbar-text a {
-    color: #00E1FF; }
+    color: #FFC200; }
     .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
-      color: #00E1FF; }
+      color: #FFC200; }
 
 .navbar-dark .navbar-brand {
   color: #fff; }
@@ -3737,7 +3737,7 @@ tbody.collapse.show {
   background-color: #fff;
   border: 1px solid #dee2e6; }
   .page-link:hover {
-    color: #00E1FF;
+    color: #FFC200;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6; }
@@ -3886,7 +3886,7 @@ tbody.collapse.show {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #00E1FF;
+  background-color: #FFC200;
   border-radius: 0.3rem; }
   @media (min-width: 576px) {
     .jumbotron {
@@ -9309,7 +9309,7 @@ p {
   font-weight: 400; }
 
 span {
-  color: #00E1FF; }
+  color: #FFC200; }
 
 label {
   font-weight: 400;
@@ -9429,7 +9429,7 @@ button:focus {
     .gallery-container .album-item:hover .album-item-hover {
       opacity: 1; }
     .gallery-container .album-item:hover .fa {
-      color: #00E1FF; }
+      color: #FFC200; }
     .gallery-container .album-item .img-thumbnail {
       border: none; }
     .gallery-container .album-item .album-item-hover {
@@ -9474,7 +9474,7 @@ button:focus {
   padding-bottom: 5rem; }
 
 .awards a {
-  color: #00E1FF;
+  color: #FFC200;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease; }
@@ -9482,17 +9482,17 @@ button:focus {
     color: #000000; }
 
 .btn-outline-light {
-  color: #00E1FF;
-  border: 1.4px solid #00E1FF;
+  color: #FFC200;
+  border: 1.4px solid #FFC200;
   border-radius: 0;
   margin-top: 1rem;
   text-transform: uppercase; }
   .btn-outline-light:hover {
-    background-color: #00E1FF;
+    background-color: #FFC200;
     color: #fff; }
   .btn-outline-light:active {
-    color: #00E1FF;
-    border: 1.4px solid #00E1FF; }
+    color: #FFC200;
+    border: 1.4px solid #FFC200; }
 
 .fa {
   color: #000000;
@@ -9501,7 +9501,7 @@ button:focus {
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease; }
   .fa:hover {
-    color: #00E1FF; }
+    color: #FFC200; }
 
 .contact-container {
   margin-top: 7rem;
@@ -9513,7 +9513,7 @@ button:focus {
     .contact-container {
       width: 40%; } }
   .contact-container .contact-background {
-    background: #00E1FF;
+    background: #FFC200;
     padding: 15px; }
 
 textarea.form-control {
