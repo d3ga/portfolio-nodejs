@@ -67,7 +67,7 @@ ul {
     transition: $links-hover-transition;
     font-weight: 600;
     letter-spacing: 0.2rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
     &:hover {
         color: $text-color;   
@@ -138,6 +138,7 @@ button:focus {
     padding-top: 50px;
     height: 100%;
     width: 100%;
+    border-radius: 0;
 
     h1 {
         text-align: center;
@@ -212,7 +213,7 @@ button:focus {
 
 .about-container {
     margin-bottom: 0;
-    margin-top: 25rem;
+    margin-top: 3rem;
     padding-top: 4rem;
     background-color: #fff;
 }
