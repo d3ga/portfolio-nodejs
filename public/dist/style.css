@@ -3886,7 +3886,7 @@ tbody.collapse.show {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #00E1FF;
+  background-color: #e9ecef;
   border-radius: 0.3rem; }
   @media (min-width: 576px) {
     .jumbotron {
@@ -9320,10 +9320,6 @@ ul {
   list-style-type: none;
   padding-left: 0px; }
 
-.container-fluid {
-  padding-left: 3rem;
-  padding-right: 3rem; }
-
 .fixed-top {
   left: 2rem; }
 
@@ -9400,25 +9396,29 @@ button:focus {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); } }
 
-.jumbotron {
-  position: absolute;
-  margin-bottom: 0;
-  margin-top: 0px;
-  padding-top: 50px;
-  height: 100%;
+.landing-jumbo {
+  background: url(/images/aurora_landing.jpeg);
+  padding-right: 0;
+  padding-left: 0;
+  display: table;
+  background-size: cover;
+  height: 100vh;
   width: 100%;
-  border-radius: 0; }
-  .jumbotron h1 {
-    text-align: center;
-    padding-top: 15rem; }
-  .jumbotron p {
-    text-align: center;
+  text-align: center; }
+  .landing-jumbo h1 {
+    color: #fff; }
+  .landing-jumbo p {
+    color: #fff;
     font-weight: 400; }
 
-.gallery-container {
-  margin-top: 5rem;
+.projects-container {
   margin-bottom: 3rem; }
-  .gallery-container .album-item {
+  .projects-container #album {
+    margin-right: 0;
+    margin-left: 0; }
+  .projects-container .projects-title {
+    text-align: center; }
+  .projects-container .album-item {
     display: inline-block;
     position: relative;
     border: none;
@@ -9427,13 +9427,13 @@ button:focus {
     -webkit-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease; }
-    .gallery-container .album-item:hover .album-item-hover {
+    .projects-container .album-item:hover .album-item-hover {
       opacity: 1; }
-    .gallery-container .album-item:hover .fa {
+    .projects-container .album-item:hover .fa {
       color: #00E1FF; }
-    .gallery-container .album-item .img-thumbnail {
+    .projects-container .album-item .img-thumbnail {
       border: none; }
-    .gallery-container .album-item .album-item-hover {
+    .projects-container .album-item .album-item-hover {
       opacity: 0;
       background: rgba(0, 0, 0, 0.5);
       position: absolute;
@@ -9446,7 +9446,7 @@ button:focus {
       -webkit-transition: opacity 0.15s ease;
       -o-transition: opacity 0.15s ease;
       transition: opacity 0.15s ease; }
-      .gallery-container .album-item .album-item-hover i {
+      .projects-container .album-item .album-item-hover i {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -9461,7 +9461,6 @@ button:focus {
 
 .about-container {
   margin-bottom: 0;
-  margin-top: 3rem;
   padding-top: 4rem;
   background-color: #fff; }
 

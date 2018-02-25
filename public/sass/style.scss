@@ -40,11 +40,6 @@ ul {
     padding-left: 0px;
 }
 
-.container-fluid {
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-
 // Navbar
 
 .fixed-top {
@@ -131,31 +126,42 @@ button:focus {
 
 // Home
 
-.jumbotron {
-    position: absolute;
-    margin-bottom: 0;
-    margin-top: 0px;
-    padding-top: 50px;
-    height: 100%;
+
+.landing-jumbo {
+    background: url(/images/aurora_landing.jpeg);
+    padding-right: 0;
+    padding-left: 0;
+    display: table;
+    background-size: cover;
+    height: 100vh;
     width: 100%;
-    border-radius: 0;
+    text-align: center;
 
     h1 {
-        text-align: center;
-        padding-top: 15rem;
+        color: #fff;
+        // vertical-align: middle;
+        // text-align: center;
     }
 
     p {
-        text-align: center;
+        color: #fff;
+        // text-align: center;
         font-weight: 400;
     }
 }
 
-// Gallery
+// Projects
 
-.gallery-container {
-    margin-top: 5rem;
+.projects-container {
     margin-bottom: 3rem;
+        #album {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .projects-title {
+            text-align: center;
+        }
 
         .album-item {
             display: inline-block;
@@ -213,7 +219,6 @@ button:focus {
 
 .about-container {
     margin-bottom: 0;
-    margin-top: 3rem;
     padding-top: 4rem;
     background-color: #fff;
 }
