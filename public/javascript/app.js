@@ -1,4 +1,7 @@
 import './bootstrap.js'
 
-// This is where we write our own JavaScript for the website!
-console.log('Hello stranger!')
+window.addEventListener('scroll', function () {
+    document.body.classList[
+      window.scrollY > window.innerHeight / 1.04 ? 'add': 'remove'
+    ]('scrolled');
+  });

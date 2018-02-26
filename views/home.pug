@@ -1,10 +1,10 @@
 extends layout
 
 block content
-    .jumbotron-fluid.landing-jumbo
-        .container-fluid
-            h1 Kostas Degaitas
-            p &lt;/development:design&gt;
+    .jumbotron-fluid
+        .container-fluid.background-image
+        h1 Hello I am Kostas
+        p &lt;/development:design&gt;
 
     .container-fluid.about-container
         .row
@@ -125,5 +125,4 @@ block content
                 type='submit'
             ) Send
             
-  
-
+    script(src="/dist/app.bundle.js")

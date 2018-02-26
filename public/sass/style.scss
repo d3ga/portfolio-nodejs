@@ -44,11 +44,8 @@ ul {
 
 .fixed-top {
     left: 2rem;
+    top: 1rem;
 }
-
-// .navbar-light {
-//     mix-blend-mode: overlay;
-// }
 
 .nav-link {
     font-weight: 400;
@@ -58,12 +55,20 @@ ul {
 }
 
 .navbar-light .navbar-brand {
-    color: $text-color;
-    transition: $links-hover-transition;
+    color: #fff;
     font-weight: 600;
     letter-spacing: 0.2rem;
     font-size: 1.4rem;
     text-transform: uppercase;
+    &:hover {
+        color: #fff;   
+    }
+}
+
+// Change color of navbar brand on scroll
+
+.scrolled .navbar-light .navbar-brand {
+    color: $text-color;
     &:hover {
         color: $text-color;   
     }
@@ -85,10 +90,16 @@ button:focus {
 
 .navbar-light .navbar-toggler-icon {
     background-image: none;
-    // overflow: hidden;
 }
 
 .bar {
+    background: #fff;
+    display: block;
+    padding: 1px;
+    margin-top: 6px;
+}
+
+.scrolled .bar {
     background: $text-color;
     display: block;
     padding: 1px;
@@ -96,20 +107,20 @@ button:focus {
 }
 
 .top-bar {
-    animation: rotation 15s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+    animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
     // animation-delay: 3.5s;
     margin-left: 7px;
     width: 15px;
 }
 
 .middle-bar {
-    animation: rotation 15s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+    animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
     // animation-delay: 3.4s;
     width: 30px;
 }
 
 .bottom-bar {
-    animation: rotation 15s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+    animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
     // animation-delay: 3s;
     margin-left: 7px;
     width: 15px;
@@ -126,26 +137,43 @@ button:focus {
 
 // Home
 
-
-.landing-jumbo {
-    background: url(/images/aurora_landing.jpeg);
-    padding-right: 0;
-    padding-left: 0;
-    display: table;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
+.jumbotron-fluid {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    padding: 125px 100px;
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
     text-align: center;
+    
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/images/aurora_landing.jpeg);
+        background-size: cover;
+        z-index: -1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
 
     h1 {
         color: #fff;
-        // vertical-align: middle;
-        // text-align: center;
     }
-
+    
     p {
         color: #fff;
-        // text-align: center;
         font-weight: 400;
     }
 }
@@ -194,7 +222,7 @@ button:focus {
                 height: 100%;
                 color: rgba(255, 255, 255, 1);
                 text-align: center;
-                transition: opacity 0.15s ease;
+                transition: opacity 0.7s ease;
 
             i {
                 position: absolute;
@@ -280,7 +308,7 @@ button:focus {
     width: 100%;
 
     @media (min-width: 768px) {
-        width: 50%;
+        width: 60%;
     }
 
     @media (min-width: 1200px) {
