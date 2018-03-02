@@ -152,7 +152,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #00E1FF;
+    color: #63FF00;
     text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
@@ -2412,7 +2412,7 @@ fieldset:disabled a.btn {
   color: #007bff;
   background-color: transparent; }
   .btn-link:hover {
-    color: #00E1FF;
+    color: #63FF00;
     text-decoration: none;
     background-color: transparent;
     border-color: transparent; }
@@ -3426,9 +3426,9 @@ tbody.collapse.show {
     bottom: 100%; }
 
 .navbar-light .navbar-brand {
-  color: #99f3ff; }
+  color: #c1ff99; }
   .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-    color: #99f3ff; }
+    color: #c1ff99; }
 
 .navbar-light .navbar-nav .nav-link {
   color: #000000; }
@@ -3441,7 +3441,7 @@ tbody.collapse.show {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #99f3ff; }
+  color: #c1ff99; }
 
 .navbar-light .navbar-toggler {
   color: #000000;
@@ -3453,9 +3453,9 @@ tbody.collapse.show {
 .navbar-light .navbar-text {
   color: #000000; }
   .navbar-light .navbar-text a {
-    color: #99f3ff; }
+    color: #c1ff99; }
     .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
-      color: #99f3ff; }
+      color: #c1ff99; }
 
 .navbar-dark .navbar-brand {
   color: #fff; }
@@ -3737,7 +3737,7 @@ tbody.collapse.show {
   background-color: #fff;
   border: 1px solid #dee2e6; }
   .page-link:hover {
-    color: #00E1FF;
+    color: #63FF00;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6; }
@@ -9294,22 +9294,22 @@ a.text-dark:hover, a.text-dark:focus {
   overflow: visible;
   clip: auto; }
 
+h1 {
+  color: #000000;
+  font-weight: 600; }
+
 h3 {
   color: #000000;
   margin-top: 0px;
   font-weight: 800;
   margin-bottom: 1rem; }
 
-h1 {
-  color: #000000;
-  font-weight: 800; }
-
 p {
   color: #000000;
   font-weight: 400; }
 
 span {
-  color: #00E1FF; }
+  color: #63FF00; }
 
 label {
   font-weight: 400;
@@ -9320,9 +9320,21 @@ ul {
   list-style-type: none;
   padding-left: 0px; }
 
+.container {
+  padding-left: 0;
+  padding-right: 0; }
+
+h3.title {
+  color: #000000;
+  margin-top: 0px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-transform: uppercase; }
+
 .fixed-top {
-  left: 2rem;
-  top: 1rem; }
+  left: 1rem;
+  top: 0.8rem; }
 
 .nav-link {
   font-weight: 400;
@@ -9335,7 +9347,7 @@ ul {
 .navbar-light .navbar-brand {
   color: #fff;
   font-weight: 600;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.3rem;
   font-size: 1.4rem;
   text-transform: uppercase; }
   .navbar-light .navbar-brand:hover {
@@ -9363,13 +9375,13 @@ button:focus {
 .bar {
   background: #fff;
   display: block;
-  padding: 1px;
+  padding: 1.2px;
   margin-top: 6px; }
 
 .scrolled .bar {
   background: #000000;
   display: block;
-  padding: 1px;
+  padding: 1.2px;
   margin-top: 6px; }
 
 .top-bar {
@@ -9430,7 +9442,7 @@ button:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(/images/aurora_landing.jpeg);
+    background: url(/images/landing_1.jpeg);
     background-size: cover;
     z-index: -1; }
     .jumbotron-fluid .background-image:after {
@@ -9440,11 +9452,43 @@ button:focus {
       left: 0;
       width: 100%;
       height: 100%; }
-  .jumbotron-fluid h1 {
-    color: #fff; }
+  .jumbotron-fluid h1.hello {
+    color: #fff;
+    font-weight: 400; }
+    .jumbotron-fluid h1.hello span {
+      color: #fff;
+      font-weight: 600; }
   .jumbotron-fluid p {
     color: #fff;
     font-weight: 400; }
+    .jumbotron-fluid p span {
+      color: #fff;
+      font-weight: 600; }
+
+.icon-arrow-down {
+  -webkit-animation: floating 2s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+          animation: floating 2s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  position: absolute;
+  bottom: 2rem;
+  fill: white;
+  width: 1.5rem;
+  height: auto; }
+
+@-webkit-keyframes floating {
+  0% {
+    bottom: 2rem; }
+  50% {
+    bottom: 3rem; }
+  100% {
+    bottom: 2rem; } }
+
+@keyframes floating {
+  0% {
+    bottom: 2rem; }
+  50% {
+    bottom: 3rem; }
+  100% {
+    bottom: 2rem; } }
 
 .projects-container {
   margin-bottom: 3rem; }
@@ -9465,7 +9509,7 @@ button:focus {
     .projects-container .album-item:hover .album-item-hover {
       opacity: 1; }
     .projects-container .album-item:hover .fa {
-      color: #00E1FF; }
+      color: #63FF00; }
     .projects-container .album-item .img-thumbnail {
       border: none; }
     .projects-container .album-item .album-item-hover {
@@ -9489,11 +9533,6 @@ button:focus {
         margin-left: -1rem;
         margin-top: -1rem; }
 
-.about-body {
-  background-image: url(/images/sea_hero.jpeg);
-  background-attachment: fixed;
-  background-size: cover; }
-
 .about-container {
   margin-bottom: 0;
   padding-top: 4rem;
@@ -9509,7 +9548,7 @@ button:focus {
   padding-bottom: 5rem; }
 
 .awards a {
-  color: #00E1FF;
+  color: #63FF00;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease; }
@@ -9517,17 +9556,17 @@ button:focus {
     color: #000000; }
 
 .btn-outline-light {
-  color: #00E1FF;
-  border: 1.4px solid #00E1FF;
+  color: #63FF00;
+  border: 1.4px solid #63FF00;
   border-radius: 0;
   margin-top: 1rem;
   text-transform: uppercase; }
   .btn-outline-light:hover {
-    background-color: #00E1FF;
+    background-color: #63FF00;
     color: #fff; }
   .btn-outline-light:active {
-    color: #00E1FF;
-    border: 1.4px solid #00E1FF; }
+    color: #63FF00;
+    border: 1.4px solid #63FF00; }
 
 .fa {
   color: #000000;
@@ -9536,7 +9575,11 @@ button:focus {
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease; }
   .fa:hover {
-    color: #00E1FF; }
+    color: #63FF00; }
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 2rem; }
 
 .contact-container {
   margin-top: 7rem;
@@ -9548,7 +9591,7 @@ button:focus {
     .contact-container {
       width: 40%; } }
   .contact-container .contact-background {
-    background: #00E1FF;
+    background: #63FF00;
     padding: 15px; }
 
 textarea.form-control {
