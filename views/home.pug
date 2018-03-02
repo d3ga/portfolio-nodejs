@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    .jumbotron-fluid
+    .jumbotron-fluid.text-center
         .container-fluid.background-image
         h1.hello Hi, I am 
             span Kostas
@@ -9,7 +9,7 @@ block content
             span berlin 
             | based junior developer
 
-        svg(class="icon-arrow-down" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.5 25.2")
+        svg.icon-arrow-down.align-self-center(version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.5 25.2")
             polygon(points="22.9,24.8 0.7,3.9 4,0.4 22.9,18.2 41.5,0.4 44.8,3.8")
 
     .container.about-container
@@ -43,6 +43,9 @@ block content
                     li MongoDB
                     li Adobe Illustrator (Adobe Certified Associate)
                     li Adobe InDesign (Adobe Certified Associate)
+
+            .col-12.col-md-6.col-lg-6
+                ul
                     li Adobe Photoshop
                     li Adobe After Effects
                     li Adobe Premiere
@@ -53,88 +56,84 @@ block content
                     li Apple Logic Pro
                     li Ableton Live!
                     li Cubase SX
-
-            .col-12.col-md-6.col-lg-6
-
-                h3.title Awards
-
-                .awards
-                    a(
-                        href='http://www.greekanimation.com/movies/incongruous-tendency/', 
-                        target='blank'
-                    ) Athens Animfest 2009 (1st Prize, Best Short Film)
                 
-
-
-
     .container.projects-container
-        .row#album
+        .row
             .col-12
-                h3.title.projects-title Projects
+                h3.title.text-left Projects
             .col-12.col-md-4.col-lg-3.album-item
-                img.img-thumbnail(src="/images/thumb_1.jpg")
-                a.album-item-hover(data-fancybox="gallery" href="/images/img_1.jpg" target="_blank")
+                img.img-thumbnail(src="/images/thumbnail_marvel.jpg")
+                a.album-item-hover(href="https://d3ga.github.io/marvel-api/" target="_blank")
+                    i.fa.fa-plus-square-o.fa2x(aria-hidden="true")
+            .col-12.col-md-4.col-lg-3.album-item
+                img.img-thumbnail(src="/images/thumbnail_marvel.jpg")
+                a.album-item-hover(href="https://d3ga.github.io/marvel-api/" target="_blank")
+                    i.fa.fa-plus-square-o.fa2x(aria-hidden="true")
+            .col-12.col-md-4.col-lg-3.album-item
+                img.img-thumbnail(src="/images/thumbnail_marvel.jpg")
+                a.album-item-hover(href="https://d3ga.github.io/marvel-api/" target="_blank")
+                    i.fa.fa-plus-square-o.fa2x(aria-hidden="true")
+            .col-12.col-md-4.col-lg-3.album-item
+                img.img-thumbnail(src="/images/thumbnail_marvel.jpg")
+                a.album-item-hover(href="https://d3ga.github.io/marvel-api/" target="_blank")
                     i.fa.fa-plus-square-o.fa2x(aria-hidden="true")
         
-
     .container.contact-container
-        .col-12
-            h3.title Contact
-        .row.contact-background
-            .col-xs-12.col-md-12.col-lg-12
-                form.form
-                    .form-group
-                        label(
-                            for='inputname'
-                            ) Name 
-                        input(
-                            type='text',
-                            class='form-control',
-                            id='name',
-                            placeholder='your name here'
-                            ) 
-                    
-                    .form-group
-                        label(
-                            for='email'
-                            ) Email 
-                        input(
-                            type='email',
-                            class='form-control',
-                            id='email'
-                            placeholder='your@email.com'
-                            ) 
-                      
-                    .form-group
-                        textarea(
-                            class='form-control',
-                            rows='5'
-                            )
+        .row
+            .col-12
+                h3.title.text-left Contact
+            .contact-background.mx-auto
+                .col-xs-12.col-md-12.col-lg-12
+                    form.form
+                        .form-group
+                            label(
+                                for='inputname'
+                                ) Name 
+                            input(
+                                type='text',
+                                class='form-control',
+                                id='name',
+                                placeholder='your name here'
+                                ) 
+                        
+                        .form-group
+                            label(
+                                for='email'
+                                ) Email 
+                            input(
+                                type='email',
+                                class='form-control',
+                                id='email'
+                                placeholder='your@email.com'
+                                ) 
+                        
+                        .form-group
+                            textarea(
+                                class='form-control',
+                                rows='5'
+                                )
 
-        .form-group.text-center
-            button.btn.btn-outline-light(
-                type='submit'
-            ) Send
+                        .form-group.text-center
+                            button.btn.btn-outline-light(
+                                type='submit'
+                            ) Send
             
-    .container.text-right.social-icons
+    .container-fluid.text-center.social-icons-container
+        a(
+            href='https://github.com/d3ga',
+            target='blank',
+            aria-hidden='true'
+        )
+            .fa.fa-github.fa-2x
         a(
             href='https://www.linkedin.com/in/kostasdega/',
             target='blank',
             aria-hidden='true'
         )
             .fa.fa-linkedin-square.fa-2x
-
         a(
             href='https://www.behance.net/kostasdegaitas',
             target='blank',
             aria-hidden='true'
         ) 
             .fa.fa-behance.fa-2x
-
-        a(
-            href='https://www.instagram.com/D3ga_k/',
-            target='blank',
-            aria-hidden='true'
-        ) 
-          .fa.fa-instagram.fa-2x
-    script(src="/dist/app.bundle.js")

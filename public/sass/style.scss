@@ -30,7 +30,7 @@ span {
 
 label {
     font-weight: 400;
-    color: #fff;
+    color: $text-color;
     text-transform: uppercase;
 }
 
@@ -61,11 +61,21 @@ h3.title {
     top: 0.8rem;
 }
 
+
 .nav-link {
     font-weight: 400;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     transition: $links-hover-transition; 
+}
+    // Change color of element on scroll
+
+.scrolled .nav-link {
+    color: red;
+    // font-weight: 800;
+    // letter-spacing: 0.1rem;
+    // text-transform: uppercase;
+    // transition: $links-hover-transition; 
 }
 
 .navbar-light .navbar-brand {
@@ -79,7 +89,7 @@ h3.title {
     }
 }
 
-// Change color of navbar brand & toggler on scroll
+    // Change color of element on scroll
 
 .scrolled .navbar-light .navbar-brand {
     color: $text-color;
@@ -109,14 +119,16 @@ button:focus {
 .bar {
     background: #fff;
     display: block;
-    padding: 1.2px;
+    padding: 1px;
     margin-top: 6px;
 }
+
+    // Change color of element on scroll
 
 .scrolled .bar {
     background: $text-color;
     display: block;
-    padding: 1.2px;
+    padding: 1px;
     margin-top: 6px;
 }
 
@@ -154,13 +166,11 @@ button:focus {
 .jumbotron-fluid {
     display: flex;
 	flex-direction: column;
-	align-items: center;
     padding: 125px 100px;
 	position: relative;
 	justify-content: center;
 	min-height: 100vh;
 	color: #fff;
-    text-align: center;
     
     .background-image {
         position: absolute;
@@ -168,7 +178,7 @@ button:focus {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url(/images/landing_1.jpeg);
+        background: url(/images/aurora_landing.jpeg);
         background-size: cover;
         z-index: -1;
 
@@ -225,59 +235,52 @@ button:focus {
 
 .projects-container {
     margin-bottom: 3rem;
-        #album {
-            margin-right: 0;
-            margin-left: 0;
+    margin-top: 3rem;
+
+    .album-item {
+        display: inline-block;
+        position: relative;
+        border: none;
+        padding-left: 0px;
+        padding-right: 0px;
+        transition: $links-hover-transition;
+
+        &:hover .album-item-hover {
+            opacity: 1;
         }
 
-        .projects-title {
-            text-align: center;
+        &:hover .fa {
+            color: $highlights;
         }
 
-        .album-item {
-            display: inline-block;
-            position: relative;
+        .img-thumbnail {
             border: none;
-            padding-left: 0px;
-            padding-right: 0px;
-            transition: $links-hover-transition;
-
-            &:hover .album-item-hover {
-                opacity: 1;
-            }
-
-            &:hover .fa {
-                color: $highlights;
-            }
-
-            .img-thumbnail {
-                border: none;
-
-            }
-
-            .album-item-hover {
-                opacity: 0;
-                background: rgba(0, 0, 0, 0.5);
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                color: rgba(255, 255, 255, 1);
-                text-align: center;
-                transition: opacity 0.7s ease;
-
-            i {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                font-size: 2.5rem;
-                margin-left: -1rem;
-                margin-top: -1rem;
-            }
 
         }
+
+        .album-item-hover {
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            transition: opacity 0.7s ease;
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 2.5rem;
+            margin-left: -1rem;
+            margin-top: -1rem;
+        }
+
     }
+}
 }
 
 // About
@@ -295,78 +298,61 @@ button:focus {
     padding-top: 2rem;
 }
 
-.social-icons {
-    background-color: #fff;
-    padding-top: 1rem;
-    padding-bottom: 5rem;
-}
+// Awards
 
 .awards {
     a {
         color: $highlights;
         transition: $links-hover-transition;
-
+        
         &:hover {
             color: $text-color;
         }
     }
 }
 
-// Buttons
-
-.btn-outline-light {
-    color: $highlights;
-    border: 1.4px solid $highlights;
-    border-radius: 0;
-    margin-top: 1rem;
-    text-transform: uppercase;
-    &:hover {
-        background-color: $highlights;
-        color: #fff;
-    } 
-    &:active {
-        color: $highlights;
-        border: 1.4px solid $highlights;
-    }
-}
-
-.fa {
-    color: $text-color;
-    margin-right: 1rem;
-    transition: $links-hover-transition;           
-
-    &:hover {
-        color: $highlights;
-    }
-}
-
 // Contact
 
-.contact-title {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
 .contact-container {
-    margin-top: 7rem;
-    width: 100%;
-
-    @media (min-width: 768px) {
-        width: 60%;
-    }
-
-    @media (min-width: 1200px) {
-        width: 40%;
-    }
-
-    .contact-background {
-        background: $highlights;
-        padding: 15px;
-    }
-}
-
-textarea.form-control {
-    height: auto;
     margin-top: 2rem;
+    
+    .contact-background {
+        padding: 15px;
+        margin-top: 1rem;
+        width: 80%;
+        
+        .form-control {
+            border: 1px solid $text-color;
+        }
+    }
+    .btn-outline-light {
+        color: $highlights;
+        border: 1.4px solid $highlights;
+        border-radius: 0;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        &:hover {
+            background-color: $highlights;
+            color: #fff;
+        } 
+        &:active {
+            color: $highlights;
+            border: 1.4px solid $highlights;
+        }
+    }        
 }
+        
+// Footer
 
+.social-icons-container {
+    background-color: #000;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+
+    .fa {
+        color: #fff;
+        margin-right: 1rem;
+    }
+}
