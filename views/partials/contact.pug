@@ -1,9 +1,8 @@
-extends layout
-
-block content
-
-    .container.contact-container
-        .row.contact-background
+.container.contact-container#contact
+    .row
+        .col-12
+            h3.title.text-left Contact
+        .contact-background.mx-auto
             .col-xs-12.col-md-12.col-lg-12
                 form.form
                     .form-group
@@ -27,16 +26,14 @@ block content
                             id='email'
                             placeholder='your@email.com'
                             ) 
-                      
+                    
                     .form-group
                         textarea(
                             class='form-control',
                             rows='5'
                             )
 
-        .form-group.text-center
-            button.btn.btn-outline-light(
-                type='submit'
-            ) Send
-            
-  
+                    .form-group.text-center
+                        button.btn.btn-outline-light(
+                            type='submit'
+                        ) Send
