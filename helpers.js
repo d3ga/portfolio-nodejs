@@ -43,3 +43,14 @@ exports.socialIcons = [
     },
     
 ]
+
+// Projects
+
+exports.projectThumbnails = [
+    {
+        title: 'Marvel Heroes Search',   
+        href: 'https://d3ga.github.io/marvel-api/',
+        src: '/images/thumbnail_marvel_compressed.jpg',
+        alt: `Thumbnail of project Marvel Heroes Search`
+    }
+]

@@ -2,19 +2,8 @@
     .row
         .col-12
             h3.title.text-left Projects
-        .col-12.col-md-4.col-lg-3.album-item
-            img.img-thumbnail(src="/images/thumbnail_marvel.jpg")
-            a.album-item-hover(href="https://d3ga.github.io/marvel-api/" target="_blank")
-                i.fa.fa-plus-square-o.fa2x(aria-hidden="true")
-        .col-12.col-md-4.col-lg-3.album-item
-            img.img-thumbnail(src="/images/thumbnail_marvel.jpg")
-            a.album-item-hover(href="https://d3ga.github.io/marvel-api/" target="_blank")
-                i.fa.fa-plus-square-o.fa2x(aria-hidden="true")
-        .col-12.col-md-4.col-lg-3.album-item
-            img.img-thumbnail(src="/images/thumbnail_marvel.jpg")
-            a.album-item-hover(href="https://d3ga.github.io/marvel-api/" target="_blank")
-                i.fa.fa-plus-square-o.fa2x(aria-hidden="true")
-        .col-12.col-md-4.col-lg-3.album-item
-            img.img-thumbnail(src="/images/thumbnail_marvel.jpg")
-            a.album-item-hover(href="https://d3ga.github.io/marvel-api/" target="_blank")
-                i.fa.fa-plus-square-o.fa2x(aria-hidden="true")
+            each project in helpers.projectThumbnails
+                .col-12.col-md-6.project-thumbnail.position-relative.d-inline-block.rounded-0
+                    img.img-thumbnail.border-0(src=`${project.src}` alt=`${project.alt}`)
+                    a.project-thumbnail-hover(href=`${project.href}` target="_blank")
+                        
