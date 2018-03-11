@@ -1,5 +1,5 @@
 // Main navigation (currently supports max. 1 sub-level)
-exports.siteName = `Kostas Degaitas`
+exports.siteName = `Kostas`
 
 // Navigation
 
@@ -52,5 +52,11 @@ exports.projectThumbnails = [
         href: 'https://d3ga.github.io/marvel-api/',
         src: '/images/thumbnail_marvel_compressed.jpg',
         alt: `Thumbnail of project Marvel Heroes Search`
+    },
+    {
+        title: 'Google Maps User Geolocation',   
+        href: 'https://codepen.io/dega_k/pen/BJJmqV',
+        src: '/images/thumbnail_google_maps_compressed.png',
+        alt: `Thumbnail of project Google Maps User Geolocation`
     }
 ]

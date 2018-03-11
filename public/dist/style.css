@@ -406,7 +406,7 @@ mark,
   height: auto; }
 
 .img-thumbnail {
-  padding: 0.25rem;
+  padding: 0;
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
@@ -9321,6 +9321,7 @@ ul {
   padding-left: 0px; }
 
 h3.title {
+  z-index: 20000;
   color: #000000;
   margin-top: 0px;
   font-weight: 600;
@@ -9496,14 +9497,21 @@ button:focus {
   margin-bottom: 3rem;
   margin-top: 3rem; }
   .projects-container .project-thumbnail {
+    margin: 0.5rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     padding-left: 0px;
     padding-right: 0px;
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
     -webkit-box-shadow: 2rem 2rem 4rem #d8d8d8;
             box-shadow: 2rem 2rem 4rem #d8d8d8; }
-    .projects-container .project-thumbnail:hover .project-thumbnail-hover {
+    .projects-container .project-thumbnail:hover {
+      -webkit-transition: color 0.3s ease;
+      -o-transition: color 0.3s ease;
+      transition: color 0.3s ease;
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
       opacity: 1; }
     .projects-container .project-thumbnail .project-thumbnail-hover {
       opacity: 0;
