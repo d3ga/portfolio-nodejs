@@ -2,8 +2,11 @@
     .row
         .col-12
             h3.title.text-left Projects
-            each project in helpers.projectThumbnails
-                .col-12.col-md-6.project-thumbnail.position-relative.d-inline-block.rounded-0
-                    img.img-thumbnail.border-0(src=`${project.src}` alt=`${project.alt}`)
-                    a.project-thumbnail-hover(href=`${project.href}` target="_blank")
+            
+        each project in helpers.projectThumbnails
+            .col-12.col-md-6.project-thumbnail.position-relative.d-inline-block
+                img.img-thumbnail.border-0.rounded-0(src=`${project.src}` alt=`${project.alt}`)
+                a.project-thumbnail-mask(href=`${project.href}` target="_blank")
+                    h4.project-title= `${project.title}`
+                    p.project-description= `${project.description}`
                         
