@@ -2,9 +2,9 @@
     .row
         .col-12
             h3.title.text-left Projects
-            
+    .row        
         each project in helpers.projectThumbnails
-            .col-12.col-md-6.project-thumbnail.position-relative.d-inline-block
+            .col-12.col-md-6.project-thumbnail
                 img.img-thumbnail.border-0.rounded-0(src=`${project.src}` alt=`${project.alt}`)
                 a.project-thumbnail-mask(href=`${project.href}` target="_blank")
                     h4.project-title= `${project.title}`

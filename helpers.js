@@ -48,17 +48,17 @@ exports.socialIcons = [
 
 exports.projectThumbnails = [
     {
-        title: 'Marvel Superheroes Search',   
+        title: 'Marvel Heroes Search',   
         href: 'https://d3ga.github.io/marvel-api/',
         src: '/images/thumbnail_marvel_compressed.jpg',
         alt: 'Thumbnail of project Marvel Heroes Search',
-        description: 'A minimal design search engine for Marvel superheroes. You can see a picture of every character a small description (if available) and the comics that the have appeared using data provided by the Marvel API'
+        description: 'A minimal design search engine for Marvel superheroes. You can see a picture of every character a small description and the comics that the have appeared using data provided by the Marvel API.'
     },
     {
-        title: 'Google Maps User Geolocation',   
+        title: 'User Geolocation',   
         href: 'https://codepen.io/dega_k/pen/BJJmqV',
         src: '/images/thumbnail_google_maps_compressed.png',
         alt: 'Thumbnail of project Google Maps User Geolocation',
-        description: 'Estimates the users geolocation, ip, country, city, region, provider, and postal code using data from the "ipinfo.io API" and displays a marker on the map with "Google Maps API".'
+        description: 'Estimates the users geolocation, ip, country, city, region, provider, and postal code using data from the ipinfo.io API and displays a marker on the map with Google Maps API.'
     }
 ]

@@ -23,3 +23,30 @@ $('a[href^="#"]').click(function() {
 
     return false;
 });
+
+// Display elements with delay
+const hoveredElement = document.querySelectorAll('.project-thumbnail')
+
+hoveredElement.forEach(function(element) {
+    element.addEventListener('mouseenter', function() {
+        setTimeout(() => {
+            this.querySelector('.project-title').style.opacity= '1';
+
+            setTimeout(() => {
+                this.querySelector('.project-description').style.opacity= '1';
+            }, 200)
+        }, 400)
+    })
+})
+
+hoveredElement.forEach(function(element) {
+    element.addEventListener('mouseleave', function() {
+        setTimeout(() => {
+            this.querySelector('.project-title').style.opacity= '0';
+
+            setTimeout(() => {
+                this.querySelector('.project-description').style.opacity= '0';
+            }, 10)
+        }, 10)
+    })
+})
