@@ -7,47 +7,41 @@
 
 // Font-Family
 $font-family-sans-serif: 'Montserrat', Helvetica, Arial, sans-serif;
-$font-family-base:     $font-family-sans-serif;
+$font-family-base:                        $font-family-sans-serif;
 
 // Alternate Highlights
-$light-blue:                         #00E1FF;
-$muted-yellow:                       #FFC200;
-$leaf-green:                         #63FF00;
-$stark-red:                          #FF0013;
+$light-blue:                                            #00E1FF;
+$dark-blue:                                             #03bebe;
+$muted-yellow:                                          #FFC200;
+$leaf-green:                                            #63FF00;
+$stark-red:                                             #FF0013;
 
 // Default Highlights
-$highlights:                       $light-blue;
+$highlights:                                            $light-blue;
 
 // Text Color
-$text-color:                         #000000;
+$text-color:                                            #000000;
 
 // Navbar links
-$navbar-light-color:               $text-color;
-$navbar-light-hover-color:         rgb(140, 140, 140);
-$navbar-light-active-color:        lighten($highlights, 30%);
-$navbar-light-toggler-border-color:       none;
-
-// Jumbotron
-$jumbotron-bg:                     $highlights;
+$navbar-light-hover-color:                   rgb(140, 140, 140);
+$navbar-light-active-color:             lighten($highlights, 30%);
+$navbar-light-toggler-border-color:                          none;
 
 // Input
-$input-border:                     $highlights;
+$input-border:                                        $highlights;
 
 // Border Radius
-$input-border-radius:                        0;
-$btn-border-radius-base:                     0;
+$input-border-radius:                                           0;
+$btn-border-radius-base:                                        0;
 
-// Links
-$link-hover-color:                 $highlights;
-$link-hover-decoration:                   none;
+// Links        
+$link-hover-color:                                     $highlights;
+$link-hover-decoration:                                      none;
 
 // Thumbnails
-$thumbnail-padding:                          0;
-$thumbnail-border:                        none;
-$thumbnail-border-radius:                 none;
+$thumbnail-padding:                                              0;
+// $thumbnail-border:                                            none;
+// $thumbnail-border-radius:                                     none;
 
 // Transitions
-$links-hover-transition:       color 0.3s ease;
-
-// Grid Gutter Width
-$grid-gutter-width:                       2rem;
+$links-hover-transition:                           color 0.3s ease;

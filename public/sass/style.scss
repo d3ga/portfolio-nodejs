@@ -1,5 +1,4 @@
 // Imports
-// @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
 @import "bootstrap-custom";
 @import "~bootstrap/scss/bootstrap";
@@ -8,16 +7,16 @@ $fa-font-path: "~font-awesome/fonts";
 
 // Global Styles 
 
+h1 {
+    color: $text-color;
+    font-weight: 600;
+}
+
 h3 {
     color: $text-color;
     margin-top: 0px;
     font-weight: 800;
     margin-bottom: 1rem;
-}
-
-h1 {
-    color: $text-color;
-    font-weight: 800;
 }
 
 p {
@@ -31,7 +30,7 @@ span {
 
 label {
     font-weight: 400;
-    color: #fff;
+    color: $text-color;
     text-transform: uppercase;
 }
 
@@ -40,35 +39,52 @@ ul {
     padding-left: 0px;
 }
 
-.container-fluid {
-    padding-left: 3rem;
-    padding-right: 3rem;
+h3.title {
+    z-index: 20000;
+    color: $text-color;
+    margin-top: 0px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+
 }
 
 // Navbar
 
 .fixed-top {
-    left: 2rem;
+    left: 1rem;
+    top: 0.8rem;
 }
 
-// .navbar-light {
-//     mix-blend-mode: overlay;
-// }
 
-.nav-link {
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
     font-weight: 400;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    transition: $links-hover-transition; 
+}
+    // Change color of element on scroll
+
+.scrolled .navbar-light .navbar-nav .nav-link {
+    color: #000;
 }
 
 .navbar-light .navbar-brand {
-    color: $text-color;
-    transition: $links-hover-transition;
+    color: #fff;
     font-weight: 600;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
     font-size: 1.4rem;
     text-transform: uppercase;
+    &:hover {
+        color: #fff;   
+    }
+}
+
+    // Change color of element on scroll
+
+.scrolled .navbar-light .navbar-brand {
+    color: $text-color;
     &:hover {
         color: $text-color;   
     }
@@ -90,10 +106,18 @@ button:focus {
 
 .navbar-light .navbar-toggler-icon {
     background-image: none;
-    // overflow: hidden;
 }
 
 .bar {
+    background: #fff;
+    display: block;
+    padding: 1px;
+    margin-top: 6px;
+}
+
+    // Change color of element on scroll
+
+.scrolled .bar {
     background: $text-color;
     display: block;
     padding: 1px;
@@ -101,20 +125,20 @@ button:focus {
 }
 
 .top-bar {
-    animation: rotation 15s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+    animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
     // animation-delay: 3.5s;
     margin-left: 7px;
     width: 15px;
 }
 
 .middle-bar {
-    animation: rotation 15s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+    animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
     // animation-delay: 3.4s;
     width: 30px;
 }
 
 .bottom-bar {
-    animation: rotation 15s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+    animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
     // animation-delay: 3s;
     margin-left: 7px;
     width: 15px;
@@ -131,165 +155,188 @@ button:focus {
 
 // Home
 
-.jumbotron {
-    position: absolute;
-    margin-bottom: 0;
-    margin-top: 0px;
-    padding-top: 50px;
-    height: 100%;
-    width: 100%;
-    border-radius: 0;
+.jumbotron-fluid {
+    display: flex;
+	flex-direction: column;
+    padding: 125px 100px;
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+    
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/images/aurora_landing_compressed.jpeg);
+        background-size: cover;
+        z-index: -1;
 
-    h1 {
-        text-align: center;
-        padding-top: 15rem;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 
-    p {
-        text-align: center;
+    h1.hello {
+        color: #fff;
         font-weight: 400;
+        span {
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+    p {
+        color: #fff;
+        font-weight: 400;
+        span {
+            color: #fff;
+            font-weight: 600;
+        }
     }
 }
 
-// Gallery
+.icon-arrow-down {
+    animation: floating 2s cubic-bezier(.7,0,.3,1) infinite;
+    position: absolute;
+    bottom: 2rem;
+    fill: white;
+    width: 1.5rem;
+    height: auto;
+}
 
-.gallery-container {
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-
-        .album-item {
-            display: inline-block;
-            position: relative;
-            border: none;
-            padding-left: 0px;
-            padding-right: 0px;
-            transition: $links-hover-transition;
-
-            &:hover .album-item-hover {
-                opacity: 1;
-            }
-
-            &:hover .fa {
-                color: $highlights;
-            }
-
-            .img-thumbnail {
-                border: none;
-
-            }
-
-            .album-item-hover {
-                opacity: 0;
-                background: rgba(0, 0, 0, 0.5);
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                color: rgba(255, 255, 255, 1);
-                text-align: center;
-                transition: opacity 0.15s ease;
-
-            i {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                font-size: 2.5rem;
-                margin-left: -1rem;
-                margin-top: -1rem;
-            }
-
-        }
+@keyframes floating {
+    0% {
+        bottom: 2rem;
+    }
+    50% {
+        bottom: 3rem;
+    }
+    100% {
+        bottom: 2rem;
     }
 }
 
 // About
 
-.about-body {
-    background-image: url(/images/sea_hero.jpeg);
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.about-container {
+.about-container{
     margin-bottom: 0;
-    margin-top: 3rem;
     padding-top: 4rem;
     background-color: #fff;
 }
+
+// Skills 
 
 .skills-container {
     background-color: #fff;
     padding-top: 2rem;
 }
 
-.social-icons {
-    background-color: #fff;
-    padding-top: 1rem;
-    padding-bottom: 5rem;
-}
+// Projects
 
-.awards {
-    a {
-        color: $highlights;
-        transition: $links-hover-transition;
-
+.projects-container {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    
+    .project-thumbnail {
+        // margin: 0.5rem;
+        transition: all 0.3s ease-in-out;
+        padding-left: 0px;
+        padding-right: 0px;
+        box-shadow: 2rem 2rem 4rem #d8d8d8;
+        
         &:hover {
-            color: $text-color;
+            transition: $links-hover-transition;
+            transform: scale(1.1);
+            opacity: 1;
         }
     }
-}
+    .project-thumbnail-mask {
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        transition: opacity 0.7s ease;
+        &:hover {
+            opacity: 1;
+        }
 
-// Buttons
+        .project-title {
+            transition: 1s;
+            color: rgba(255, 255, 255, 0);
+            padding: 2rem;
+            &:focus {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
 
-.btn-outline-light {
-    color: $highlights;
-    border: 1.4px solid $highlights;
-    border-radius: 0;
-    margin-top: 1rem;
-    text-transform: uppercase;
-    &:hover {
-        background-color: $highlights;
-        color: #fff;
-    } 
-    &:active {
-        color: $highlights;
-        border: 1.4px solid $highlights;
-    }
-}
-
-.fa {
-    color: $text-color;
-    margin-right: 1rem;
-    transition: $links-hover-transition;           
-
-    &:hover {
-        color: $highlights;
+        .project-description {
+            transition: $links-hover-transition;
+            transition-delay: 1.2s;
+            color: rgba(255, 255, 255, 1);
+            padding: 2rem;
+        }
     }
 }
 
 // Contact
 
 .contact-container {
-    margin-top: 7rem;
-    width: 100%;
-
-    @media (min-width: 768px) {
-        width: 50%;
-    }
-
-    @media (min-width: 1200px) {
-        width: 40%;
-    }
-
-    .contact-background {
-        background: $highlights;
-        padding: 15px;
-    }
-}
-
-textarea.form-control {
-    height: auto;
     margin-top: 2rem;
+    
+    .contact-background {
+        padding: 15px;
+        margin-top: 1rem;
+        width: 80%;
+        
+        .form-control {
+            border: 1px solid $text-color;
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+        .btn-outline-light {
+            background-color: #000;        
+            color: #fff;
+            // border: 1.4px solid $highlights;
+            border-radius: 0;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            } 
+            &:active {
+                color: $highlights;
+                border: 1.4px solid $highlights;
+            }
+        }
+    }            
 }
+        
+// Footer
 
+.social-icons-container {
+    background-color: #000;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+    
+    .fa {
+        color: #fff;
+        margin-right: 1rem;
+    }
+}
