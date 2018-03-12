@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
+
 // JS file handler
 const javascript = {
   test: /\.(js)$/,
@@ -44,6 +45,21 @@ const fontAwesome =        {
   }]
 };
 
+// Expose jQuery to the global window object
+const expose = {
+  test: require.resolve('jquery'),
+  use: [
+    {
+      loader: 'expose-loader',
+      options: 'jQuery'
+    },
+    {
+      loader: 'expose-loader',
+      options: '$'
+    }
+  ]
+};
+
 // bundle everything
 const config = {
   entry: {
@@ -55,12 +71,14 @@ const config = {
     filename: '[name].bundle.js'
   },
   module: {
-    rules: [javascript, styles, fontAwesome]
+    rules: [expose, javascript, styles, fontAwesome]
   },
   plugins: [
     new ExtractTextPlugin('style.css'),
+    uglify
   ]
 };
+
 
 process.noDeprecation = true;
 
