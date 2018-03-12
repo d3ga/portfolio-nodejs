@@ -25,8 +25,12 @@ const postcss = {
 // sass/css loader
 const styles = {
   test: /\.(scss)$/,
-  use: ExtractTextPlugin.extract(['css-loader?sourceMap', postcss, 'sass-loader?sourceMap'])
-};
+  use: ExtractTextPlugin.extract([
+  'css-loader?sourceMap&minimize=true',
+  postcss,
+  'sass-loader?sourceMap&minimize=true'
+  ])
+  };
 
 // compress JS
 const uglify = new webpack.optimize.UglifyJsPlugin({ // eslint-disable-line
@@ -63,21 +67,21 @@ const expose = {
 // bundle everything
 const config = {
   entry: {
-    app: './public/javascript/app.js'
+  app: './public/javascript/app.js'
   },
   devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, 'public', 'dist'),
-    filename: '[name].bundle.js'
+  path: path.resolve(__dirname, 'public', 'dist'),
+  filename: '[name].bundle.js'
   },
   module: {
-    rules: [expose, javascript, styles, fontAwesome]
+  rules: [expose, javascript, styles, fontAwesome]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
-    uglify
+  new ExtractTextPlugin('style.css'),
+  uglify
   ]
-};
+  };
 
 
 process.noDeprecation = true;
