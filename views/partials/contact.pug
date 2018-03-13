@@ -1,19 +1,19 @@
 .container.contact-container#contact
     .row
         .col-12
-            h3.title.text-left Contact
+            h3.title.text-left.section-title.text-center Contact
+            
         .contact-background.mx-auto
             .col-xs-12.col-md-12.col-lg-12
                 form.form
                     .form-group
                         label(
-                            for='inputname'
+                            for='name'
                             ) Name 
                         input.border-top-0.border-left-0.border-right-0(
                             type='text',
                             class='form-control',
-                            id='name',
-                            placeholder='your name here'
+                            id='name'
                             ) 
                     
                     .form-group
@@ -24,14 +24,15 @@
                             type='email',
                             class='form-control',
                             id='email'
-                            placeholder='your@email.com'
                             ) 
                     
                     .form-group
+                        label(
+                            for='message'
+                            ) Message 
                         textarea.border-top-0.border-left-0.border-right-0(
                             class='form-control',
-                            rows='5',
-                            placeholder='your message'
+                            rows='5'
                             )
 
                     .form-group.text-center

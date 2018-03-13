@@ -1,16 +1,9 @@
 .container.skills-container#skills
     .row
         .col-12.col-md-12
-            h3.title Skills
+            h3.title.section-title.text-center Skills
 
-            ul
-                li HTML
-                li CSS
-                li SCSS
-                li JavaScript
-                li Bootstrap
-                li NodeJS
-                li MongoDB
-                li Adobe Illustrator (Adobe Certified Associate)
-                li Adobe InDesign (Adobe Certified Associate)
-                li Adobe Photoshop
+            each skill in helpers.skills
+                p.technology-title= `${skill.technology}`
+                .progress
+                    .progress-bar(role='progressbar' style='width: 0%;' aria-valuenow=`${skill.percent}` aria-valuemin='0' aria-valuemax='100')

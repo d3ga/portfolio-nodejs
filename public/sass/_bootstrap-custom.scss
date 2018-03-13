@@ -17,13 +17,13 @@ $leaf-green:                                            #63FF00;
 $stark-red:                                             #FF0013;
 
 // Default Highlights
-$highlights:                                            $light-blue;
+$highlights:                                          $light-blue;
 
 // Text Color
 $text-color:                                            #000000;
 
 // Navbar links
-$navbar-light-hover-color:                   rgb(140, 140, 140);
+$navbar-light-hover-color:                            $highlights;
 $navbar-light-active-color:             lighten($highlights, 30%);
 $navbar-light-toggler-border-color:                          none;
 
@@ -39,9 +39,19 @@ $link-hover-color:                                     $highlights;
 $link-hover-decoration:                                      none;
 
 // Thumbnails
-$thumbnail-padding:                                              0;
-// $thumbnail-border:                                            none;
-// $thumbnail-border-radius:                                     none;
+$thumbnail-padding:                                             0;
 
 // Transitions
-$links-hover-transition:                           color 0.3s ease;
+$links-hover-transition:                          color 0.3s ease;
+
+// Progress bars
+
+$progress-height:                                           .7rem;
+$progress-bar-bg:                                     $highlights;
+// $progress-font-size:                ($font-size-base * .75) !default;
+// $progress-bg:                       $gray-200 !default;
+// $progress-border-radius:            $border-radius !default;
+// $progress-box-shadow:               inset 0 .1rem .1rem rgba($black, .1) !default;
+// $progress-bar-color:                $white !default;
+// $progress-bar-animation-timing:     1s linear infinite !default;
+// $progress-bar-transition:           width .6s ease !default;

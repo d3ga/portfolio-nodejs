@@ -34,8 +34,8 @@ hoveredElement.forEach(function(element) {
 
             setTimeout(() => {
                 this.querySelector('.project-description').style.opacity= '1';
-            }, 200)
-        }, 400)
+            }, 400)
+        }, 300)
     })
 })
 
@@ -50,3 +50,24 @@ hoveredElement.forEach(function(element) {
         }, 10)
     })
 })
+
+//Progress Bars Animation
+
+$.fn.isInViewport = function() {
+	var elementTop = $(this).offset().top;
+	var elementBottom = elementTop + $(this).outerHeight();
+	var viewportTop = $(window).scrollTop();
+	var viewportBottom = viewportTop + $(window).height();
+	return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).on('resize scroll', function() {
+	$('.progress').each(function() {
+		if ($(this).isInViewport()) {
+			var bar = $(this).find('.progress-bar');
+			bar.addClass('progress-animate');
+			bar.css('width', bar.attr('aria-valuenow') + '%');
+
+		}
+	});
+});
