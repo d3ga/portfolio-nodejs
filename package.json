@@ -10,12 +10,18 @@
     "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
     "dotenv": "^5.0.0",
+    "es6-promisify": "^5.0.0",
     "express": "^4.16.2",
     "font-awesome": "^4.7.0",
     "helmet": "^3.10.0",
+    "html-to-text": "^4.0.0",
     "jquery": "^3.3.1",
+    "juice": "^4.2.3",
+    "moment": "^2.21.0",
+    "nodemailer": "^4.6.3",
     "popper.js": "^1.13.0",
     "pug": "^2.0.0-rc.4"
   },

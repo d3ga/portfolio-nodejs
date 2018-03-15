@@ -1,4 +1,7 @@
 import './bootstrap.js'
+import contactForm from './contactForm'
+
+contactForm()
 
 // Change navbar style on scroll
 

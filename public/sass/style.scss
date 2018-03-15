@@ -58,6 +58,10 @@ ul {
     border-top: 2px solid $highlights;
 }
 
+.hidden {
+    display: none;
+}
+
 // Navbar
 
 .fixed-top {
@@ -336,15 +340,21 @@ button:focus {
         .btn-outline-light {
             background-color: #000;        
             color: #fff;
-            // border: 1.4px solid $highlights;
             border-radius: 0;
             margin-top: 1rem;
             text-transform: uppercase;
+            border: 1.4px solid #000;
+            
             &:hover {
                 background-color: #000;
-                color: #fff;
+                color: $highlights;
+                border: 1.4px solid $highlights;
             } 
             &:active {
+                color: $highlights;
+                border: 1.4px solid $highlights;
+            }
+            &:focus {
                 color: $highlights;
                 border: 1.4px solid $highlights;
             }

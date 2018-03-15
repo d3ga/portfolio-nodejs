@@ -1,12 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const { catchErrors } = require('../handlers/errorHandlers')
+const ContactFormController = require('../controllers/ContactFormController')
 
 // The main route
 router.get('/', (request, response) => {
-  response.render('layout', {
+  response.render('home', {
     title: 'Kostas Degaitas',
-    description: 'Hello I am kostas'
+    description: 'Hello I am Kostas'
   })
 });
 
+router.post('/contact', catchErrors(ContactFormController.submitForm))
 module.exports = router;

@@ -30,28 +30,16 @@ exports.navigation = [
 
 exports.skills = [
     {
-        technology: 'HTML',
+        technology: 'HTML & CSS & Bootstrap',
         percent: '93'
     },
     {
-        technology: 'CSS (SCSS)',
-        percent: '94'
-    },
-    {
         technology: 'JavaScript (ES6)',
-        percent: '75'
-    },
-    {
-        technology: 'Bootstrap',
-        percent: '92'
+        percent: '81'
     },
     {
         technology: 'Node.JS',
         percent: '80'
-    },
-    {
-        technology: 'MongoDB',
-        percent: '84'
     },
     {
         technology: 'Adobe Illustrator',
