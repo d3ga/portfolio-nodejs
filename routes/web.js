@@ -11,5 +11,9 @@ router.get('/', (request, response) => {
   })
 });
 
-router.post('/contact', catchErrors(ContactFormController.submitForm))
+router.post('/contact',
+  ContactFormController.validationRules,
+  ContactFormController.errorHandling,
+  catchErrors(ContactFormController.submitForm)
+)
 module.exports = router;

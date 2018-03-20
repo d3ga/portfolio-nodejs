@@ -29,13 +29,14 @@ exports.send = async (options) => {
   const text = htmlToText.fromString(html)
 
   const mailOptions = {
-      from: options.from || 'Contact Form <smtp@node-friends.com>',
-      to: options.to,
+      from: process.env.MAIL_FROM || null,
+      to: options.to || process.env.MAIL_TO,
+      replyTo: options.replyTo,
       subject: options.subject,
       html,
       text
   }
-
+  
   const sendMail = promisify(transport.sendMail, transport)
   return sendMail(mailOptions)
 }

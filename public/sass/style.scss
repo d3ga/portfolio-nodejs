@@ -330,7 +330,7 @@ button:focus {
         margin-top: 1rem;
         width: 80%;
         
-        .form-control {
+        .form-control:not(.is-invalid) {
             border: 1px solid $text-color;
             &:focus {
                 outline: 0;
