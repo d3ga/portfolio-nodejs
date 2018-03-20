@@ -54,7 +54,7 @@ hoveredElement.forEach(function(element) {
     })
 })
 
-//Progress Bars Animation
+// Progress Bars Animation
 
 $.fn.isInViewport = function() {
 	var elementTop = $(this).offset().top;

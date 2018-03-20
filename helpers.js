@@ -1,5 +1,5 @@
 // Main navigation (currently supports max. 1 sub-level)
-exports.siteName = `Dega`
+exports.siteName = `d3ga`
 
 // Navigation
 
