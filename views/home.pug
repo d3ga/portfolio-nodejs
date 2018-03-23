@@ -1,14 +1,6 @@
 doctype html
 html
   head
-    script.
-        async src="https://www.googletagmanager.com/gtag/js?id=UA-56333074-3"
-    script.
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-56333074-3');
-
     title= `${title || 'Home'} | ${helpers.siteName}`
     link(rel='stylesheet', href='/dist/style.css')
     meta(name="description", content=`${description  || 'Kostas Degaitas'}`)
