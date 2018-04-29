@@ -6,20 +6,20 @@ html
     meta(name="description", content=`${description  || 'Kostas Degaitas'}`)
     meta(name="viewport", content="width=device-width, initial-scale=1")
 
-  body(class=bodyClass ? bodyClass : '')
+  body(data-spy='scroll' class=bodyClass ? bodyClass : '')
 
     include partials/navbar
 
 
-    .jumbotron-fluid.text-center
+    .jumbotron-fluid.text-center#home
 
         .container-fluid.background-image
         
         h1.hello Hello, I am 
             span Kostas
-        p a 
-            span berlin 
-            | based junior developer
+        p a berlin 
+            | based junior 
+            span web developer
 
         svg.icon-arrow-down.align-self-center(version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.5 25.2")
             polygon(points="22.9,24.8 0.7,3.9 4,0.4 22.9,18.2 41.5,0.4 44.8,3.8")

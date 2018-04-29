@@ -6,48 +6,48 @@
  */
 
 // Font-Family
-$font-family-sans-serif: 'Montserrat', Helvetica, Arial, sans-serif;
-$font-family-base:                        $font-family-sans-serif;
+$font-family-sans-serif: "Montserrat", Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
 
 // Alternate Highlights
-$light-blue:                                            #00E1FF;
-$dark-blue:                                             #03bebe;
-$muted-yellow:                                          #FFC200;
-$leaf-green:                                            #63FF00;
-$stark-red:                                             #FF0013;
+$light-blue: #00e1ff;
+$dark-blue: #03bebe;
+$muted-yellow: #ffc200;
+$leaf-green: #63ff00;
+$stark-red: #ff0013;
 
 // Default Highlights
-$highlights:                                          $light-blue;
+$highlights: $light-blue;
 
 // Text Color
-$text-color:                                            #000000;
+$text-color: #000000;
 
 // Navbar links
-$navbar-light-hover-color:                            $highlights;
-$navbar-light-active-color:             lighten($highlights, 30%);
-$navbar-light-toggler-border-color:                          none;
+$navbar-light-hover-color: $highlights;
+$navbar-light-active-color: $highlights;
+$navbar-light-toggler-border-color: none;
 
 // Input
-$input-border:                                        $highlights;
+$input-border: $highlights;
 
 // Border Radius
-$input-border-radius:                                           0;
-$btn-border-radius-base:                                        0;
+$input-border-radius: 0;
+$btn-border-radius-base: 0;
 
-// Links        
-$link-hover-color:                                     $highlights;
-$link-hover-decoration:                                      none;
+// Links
+$link-hover-color: $highlights;
+$link-hover-decoration: none;
 
 // Thumbnails
-$thumbnail-padding:                                             0;
+$thumbnail-padding: 0;
 
 // Transitions
-$links-hover-transition:                          color 0.3s ease;
+$links-hover-transition: color 0.3s ease;
 
 // Progress bars
 
-$progress-height:                                           .7rem;
-$progress-bar-bg:                                     $highlights;
+$progress-height: 0.7rem;
+$progress-bar-bg: $highlights;
 // $progress-font-size:                ($font-size-base * .75) !default;
 // $progress-bg:                       $gray-200 !default;
 // $progress-border-radius:            $border-radius !default;

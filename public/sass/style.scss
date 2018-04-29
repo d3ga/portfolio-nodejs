@@ -1,378 +1,457 @@
-// Imports
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
+/**
+  * Contents
+  *
+  *   1. Imports
+  *   2. Global Styles
+  *   3. Navigation
+  *   4. Home
+  *   5. About
+  *   6. Skills
+  *   7. Projects
+  *   8. Contact
+  *   9. Footer
+*/
+
+/* 1. Imports
+-------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800");
 @import "bootstrap-custom";
 @import "~bootstrap/scss/bootstrap";
 $fa-font-path: "~font-awesome/fonts";
-@import '~font-awesome/scss/font-awesome.scss';
+@import "~font-awesome/scss/font-awesome.scss";
 
-// Global Styles 
+/* 2. Global Styles
+-------------------------------------------*/
 
 h1 {
-    color: $text-color;
-    font-weight: 600;
+  color: $text-color;
+  font-weight: 600;
 }
 
 h3 {
-    color: $text-color;
-    margin-top: 0px;
-    font-weight: 800;
-    margin-bottom: 1rem;
+  color: $text-color;
+  margin-top: 0px;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
 
 p {
-    color: $text-color;
-    font-weight: 400;
+  color: $text-color;
+  font-weight: 400;
 }
 
 span {
-    color: $highlights;
+  color: $highlights;
 }
 
 label {
-    font-weight: 400;
-    color: $text-color;
-    text-transform: uppercase;
+  font-weight: 400;
+  color: $text-color;
+  text-transform: uppercase;
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0px;
+  list-style-type: none;
+  padding-left: 0px;
 }
 
 .section-title {
-    z-index: 20000;
-    color: $text-color;
-    margin-top: 0px;
-    margin-bottom: 3rem;
-    font-weight: 600;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-
+  z-index: 20000;
+  color: $text-color;
+  margin-top: 0px;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .section-division {
-    z-index: -2000;
-    padding-top: 3rem;
-    margin-top: 2rem;
-    padding-right: 100%;
-    border-top: 2px solid $highlights;
+  z-index: -2000;
+  padding-top: 3rem;
+  margin-top: 2rem;
+  padding-right: 100%;
+  border-top: 2px solid $highlights;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-// Navbar
+.progress-animate {
+  transition: width 3s ease-in-out;
+}
 
+/* 3. Navigation
+-------------------------------------------*/
 .fixed-top {
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+
+  @include media-breakpoint-up(md) {
     left: 1rem;
     top: 0.8rem;
+    right: 1rem;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.navbar-nav {
+  li {
+    transition: 2s;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      background: $highlights;
+      transition: width 0.3s ease-in;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    a:hover {
+      color: $highlights;
+      text-decoration: none;
+    }
+  }
 }
 
 .navbar-light .navbar-nav .nav-link {
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  &:hover {
+    color: $highlights;
+  }
+  @include media-breakpoint-up(md) {
     color: #fff;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
+  }
 }
-    // Change color of element on scroll
+
+// Change color of navbar links on scroll
 
 .scrolled .navbar-light .navbar-nav .nav-link {
+  @include media-breakpoint-up(md) {
     color: #000;
     &:hover {
-        color:    $highlights;
+      color: $highlights;
     }
+  }
 }
+
+// Navbar Brand
 
 .navbar-light .navbar-brand {
+  color: $text-color;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  &:hover {
+    color: $text-color;
+  }
+  @include media-breakpoint-up(md) {
     color: #fff;
-    font-weight: 600;
-    letter-spacing: 0.3rem;
-    font-size: 1.4rem;
-    text-transform: uppercase;
     &:hover {
-        color: #fff;   
+      color: #fff;
     }
+  }
 }
 
-    // Change color of element on scroll
+// Change color of navbar brand on scroll
 
 .scrolled .navbar-light .navbar-brand {
+  @include media-breakpoint-up(md) {
     color: $text-color;
     &:hover {
-        color: $text-color;   
+      color: $text-color;
     }
+  }
 }
 
-// Navbar Toggler
-
-.navbar-toggler {
-    margin-right: 1rem;
-}
+// Navbar Toggler Icon
 
 .navbar-toggler-icon {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: none;
+  background-image: none;
 }
 
 .bar {
+  background: #000;
+  display: block;
+  padding: 1px;
+  margin-top: 6px;
+  @include media-breakpoint-up(md) {
     background: #fff;
-    display: block;
-    padding: 1px;
-    margin-top: 6px;
+  }
 }
 
-    // Change color of element on scroll
+// Change color of navbar icon on scroll
 
 .scrolled .bar {
-    background: $text-color;
-    display: block;
-    padding: 1px;
-    margin-top: 6px;
+  background: $text-color;
+  display: block;
+  padding: 1px;
+  margin-top: 6px;
 }
 
 .top-bar {
-    animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;;
-    margin-left: 7px;
-    width: 15px;
+  animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+  margin-left: 7px;
+  width: 15px;
 }
 
 .middle-bar {
-    animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
-    width: 30px;
+  animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+  width: 30px;
 }
 
 .bottom-bar {
-    animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
-    margin-left: 7px;
-    width: 15px;
+  animation: rotation 7s cubic-bezier(0.74, 0, 0.36, 0.99) infinite;
+  margin-left: 7px;
+  width: 15px;
 }
 
 @keyframes rotation {
-    80% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(180deg);
-    }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
 
-// Home
+/* 4. Home
+-------------------------------------------*/
 
 .jumbotron-fluid {
-    display: flex;
-	flex-direction: column;
-    padding: 125px 100px;
-	position: relative;
-	justify-content: center;
-	min-height: 100vh;
-	color: #fff;
-    
-    .background-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(/images/aurora_landing_compressed.jpeg);
-        background-size: cover;
-        z-index: -1;
+  display: flex;
+  flex-direction: column;
+  padding: 125px 100px;
+  position: relative;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
 
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/images/aurora_landing_compressed.jpeg);
+    background-size: cover;
+    z-index: -1;
 
-    h1.hello {
-        color: #fff;
-        font-weight: 400;
-        span {
-            color: #fff;
-            font-weight: 600;
-        }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
-    p {
-        color: #fff;
-        font-weight: 400;
-        span {
-            color: #fff;
-            font-weight: 600;
-        }
+  }
+
+  h1.hello {
+    color: #fff;
+    font-weight: 400;
+    span {
+      color: #fff;
+      font-weight: 600;
     }
+  }
+  p {
+    color: #fff;
+    font-weight: 400;
+    span {
+      color: #fff;
+      font-weight: 600;
+    }
+  }
 }
 
 .icon-arrow-down {
-    animation: floating 2s cubic-bezier(.7,0,.3,1) infinite;
-    position: absolute;
-    bottom: 2rem;
-    fill: white;
-    width: 1.5rem;
-    height: auto;
+  animation: floating 2s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  position: absolute;
+  bottom: 2rem;
+  fill: white;
+  width: 1.5rem;
+  height: auto;
 }
 
 @keyframes floating {
-    0% {
-        bottom: 2rem;
-    }
-    50% {
-        bottom: 3rem;
-    }
-    100% {
-        bottom: 2rem;
-    }
+  0% {
+    bottom: 2rem;
+  }
+  50% {
+    bottom: 3rem;
+  }
+  100% {
+    bottom: 2rem;
+  }
 }
 
-// About
+/* 5. About
+-------------------------------------------*/
 
-.about-container{
-    margin-top: 4rem;
+.about-container {
+  margin-top: 4rem;
 
-    .section-title-about{
-        margin-bottom: 0;
-    }
+  .section-title-about {
+    margin-bottom: 0;
+  }
 }
 
-// Skills 
-
+/* 6. Skills
+-------------------------------------------*/
 .skills-container {
-    margin-top: 4rem;
+  margin-top: 4rem;
 
-    .technology-title {
-        margin-top: 1rem; 
-    }
+  .technology-title {
+    margin-top: 1rem;
+  }
 }
 
-// Projects
-
+/* 7. Projects
+-------------------------------------------*/
 .projects-container {
-    margin-top: 4rem;
-    
-    .project-thumbnail {
-        position: relative;
-        transition: all 0.3s ease-in-out;
-        margin: 0 5px 30px 5px;
-        box-shadow: 2rem 2rem 4rem #d8d8d8;
-        
-        &:hover {
-            transition: $links-hover-transition;
-            transform: scale(1.05);
-            opacity: 1;
-        }
+  margin-top: 4rem;
+
+  .project-thumbnail {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    margin: 0 5px 30px 5px;
+    box-shadow: 2rem 2rem 4rem #d8d8d8;
+
+    &:hover {
+      transition: transform 0.2s ease-in-out;
+      transform: scale(1.05);
+      opacity: 1;
     }
-    .project-thumbnail-mask {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-        opacity: 0;
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        color: rgba(255, 255, 255, 1);
-        transition: opacity 0.7s ease;
-        overflow: hidden;
+  }
+  .project-thumbnail-mask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 1);
+    transition: opacity 0.7s ease;
+    overflow: hidden;
 
-        &:hover {
-            opacity: 1;
-        }
-
-        .project-title {
-            transition: opacity 0.7s ease;
-            opacity: 0;
-            max-width: 80%;
-            text-align: center;
-            color: rgba(255, 255, 255, 1);
-            padding: 1rem 1rem 0.5rem 1rem;
-            font-weight: 600;
-            margin-bottom: 0;
-            font-size: 1.1rem;
-
-            @include media-breakpoint-down(md) {
-                font-size: 1rem;
-            }
-        }
-
-        .project-description {
-            transition: opacity 0.7s ease;
-            opacity: 0;          
-            max-width: 80%;
-            text-align: center;
-            color: rgba(255, 255, 255, 1);
-            padding: 0.3rem 1.4rem 0.5rem 1.4rem;
-            font-size: .9rem;
-        }
+    &:hover {
+      opacity: 1;
     }
+
+    .project-title {
+      transition: opacity 0.7s ease;
+      opacity: 0;
+      max-width: 80%;
+      text-align: center;
+      color: $text-color;
+      padding: 1rem 1rem 0.5rem 1rem;
+      font-weight: 600;
+      margin-bottom: 0;
+      font-size: 1.1rem;
+
+      @include media-breakpoint-down(md) {
+        font-size: 1rem;
+      }
+    }
+
+    .project-description {
+      transition: opacity 0.7s ease;
+      opacity: 0;
+      max-width: 80%;
+      text-align: center;
+      color: $text-color;
+      padding: 0.3rem 1.4rem 0.5rem 1.4rem;
+      font-size: 0.9rem;
+    }
+  }
 }
 
-// Contact
+/* 8. Contact
+-------------------------------------------*/
 
 .contact-container {
-    margin-top: 4rem;
-    
-    .contact-background {
-        padding: 15px;
-        margin-top: 1rem;
-        width: 80%;
-        
-        .form-control:not(.is-invalid) {
-            border: 1px solid $text-color;
-            &:focus {
-                outline: 0;
-                box-shadow: none;
-            }
-        }
-        .btn-outline-light {
-            background-color: #000;        
-            color: #fff;
-            border-radius: 0;
-            margin-top: 1rem;
-            text-transform: uppercase;
-            border: 1.4px solid #000;
-            
-            &:hover {
-                background-color: #000;
-                color: $highlights;
-                border: 1.4px solid $highlights;
-            } 
-            &:active {
-                color: $highlights;
-                border: 1.4px solid $highlights;
-            }
-            &:focus {
-                color: $highlights;
-                border: 1.4px solid $highlights;
-            }
-        }
-    }            
+  margin-top: 4rem;
+
+  .contact-background {
+    padding: 15px;
+    margin-top: 1rem;
+    width: 80%;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    .form-control:not(.is-invalid) {
+      border: 1px solid $text-color;
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+    .btn-outline-light {
+      background-color: #000;
+      color: #fff;
+      border-radius: 0;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      border: 1.4px solid #000;
+
+      &:hover {
+        background-color: #000;
+        color: $highlights;
+        border: 1.4px solid $highlights;
+      }
+      &:active {
+        color: $highlights;
+        border: 1.4px solid $highlights;
+      }
+      &:focus {
+        color: $highlights;
+        border: 1.4px solid $highlights;
+      }
+    }
+  }
 }
-        
-// Footer
+
+/* 9. Footer
+-------------------------------------------*/
 
 .social-icons-container {
-    background-color: #000;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    margin-top: 4rem;
-    padding-bottom: 5rem;
-    
-    .fa {
-        color: #fff;
-        margin-right: 1rem;
-    }
+  background-color: #000;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 4rem;
+  padding-bottom: 5rem;
+
+  .fa {
+    color: #fff;
+    margin-right: 1rem;
+  }
 }
