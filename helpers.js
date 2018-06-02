@@ -34,7 +34,7 @@ exports.navigation = [
 
 exports.skills = [
   {
-    technology: "HTML | CSS | Bootstrap",
+    technology: "HTML | SCSS | Bootstrap",
     percent: "93"
   },
   {
@@ -42,20 +42,16 @@ exports.skills = [
     percent: "70"
   },
   {
-    technology: "React.js",
-    percent: "55"
+    technology: "React.js | Redux",
+    percent: "45"
   },
   {
-    technology: "Node.js",
+    technology: "Node.js | Express | MongoDB",
     percent: "60"
   },
   {
-    technology: "Adobe Illustrator",
+    technology: "Adobe Illustrator | Adobe Photoshop",
     percent: "96"
-  },
-  {
-    technology: "Adobe Photoshop",
-    percent: "95"
   }
 ];
 
@@ -106,6 +102,10 @@ exports.socialIcons = [
   {
     faIcon: "fa-linkedin-square fa-2x",
     href: "https://www.linkedin.com/in/kostasdega/"
+  },
+  {
+    faIcon: "fa-xing fa-2x",
+    href: "https://www.xing.com/profile/Kostas_Degaitas/cv"
   },
   {
     faIcon: "fa-behance fa-2x",

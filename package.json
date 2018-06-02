@@ -7,7 +7,8 @@
     "start": "node ./app.js",
     "watch": "nodemon ./app.js --ignore public/",
     "assets": "webpack -w --display-max-modules 0",
-    "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name"
+    "dev":
+      "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name"
   },
   "dependencies": {
     "axios": "^0.18.0",
