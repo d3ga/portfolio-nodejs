@@ -72,7 +72,7 @@ exports.projectThumbnails = [
     src: "/images/thumbnail_google_maps_compressed.png",
     alt: "Thumbnail of project User Geolocation",
     description:
-      "Estimates the user's IP geolocation. Displays the country, city, region, provider, and postal code using data from the ipinfo.io API and displays a marker on the map using the Google Maps API."
+      "Estimates the user's IP geolocation. Displays the country, city, region, provider, and postal code using data from the ipinfo.io API and displays a marker on the map using the Google Maps API"
   },
   {
     title: "Beers Search",
@@ -89,6 +89,14 @@ exports.projectThumbnails = [
     alt: "Thumbnail of project XKCD Comics",
     description:
       "Need a small break with some developer comics? Then have a go! Browse a random comic or get a comic by their ID. Using data provided by the XKCD Comics API"
+  },
+  {
+    title: "React ToDo",
+    href: "https://react-todo-app.kostasdegaitas.de/",
+    src: "/images/thumbnail_react_todo_compressed.jpg",
+    alt: "Thumbnail of project React ToDo",
+    description:
+      "This is a todo list build with React.js. User can add, edit & delete todo items. The app uses the browser's local storage to save the current items"
   }
 ];
 
