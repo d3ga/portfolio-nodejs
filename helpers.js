@@ -43,7 +43,7 @@ exports.skills = [
   },
   {
     technology: "React.js | Redux",
-    percent: "45"
+    percent: "60"
   },
   {
     technology: "Node.js | Express | MongoDB",
@@ -81,6 +81,14 @@ exports.projectThumbnails = [
     alt: "Thumbnail of project Beers Search",
     description:
       "You can search for a large variety of beers and read a small description about their characteristics and their origin. Data provided by the Punk API"
+  },
+  {
+    title: "GitHub User Search",
+    href: "https://github-api.netlify.com/",
+    src: "/images/github_compressed.jpg",
+    alt: "Thumbnail of project GitHub User Search",
+    description:
+      "Using GitHub's API to access user data, like their location, followers, repositories and their website if exists"
   },
   {
     title: "XKCD Comics",
